@@ -1,6 +1,8 @@
 export default {
-    colors:{
+    colors: {
         purple: "#2F2E41",
+    },
+    font: {
 
     }
 }
