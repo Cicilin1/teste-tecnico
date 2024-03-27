@@ -13,7 +13,7 @@ export const Container = styled.div`
   align-items: center; 
   gap: 24px; 
 
-  .error-message {
+  .confirm-message {
     width: auto; 
     height: 35px;
     margin-top:64px;
@@ -26,8 +26,8 @@ export const Container = styled.div`
   }
 
   img {
-    width: 447px; 
-    height: 265.36px; 
+    width: 294.96px; 
+    height: 307px; 
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: center; 
@@ -44,8 +44,8 @@ export const Container = styled.div`
     height: 516px;
 
     img {
-      width: 178px;
-      height: 265px;
+      width: 238px;
+      height: 247px;
     }
 
     .error-message {
