@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import OrderConfirmation from './components/OrderConfirmation'
+import Movies from './components/Movies'
 
 function App() {
   const itemCount = 0;
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header itemCount={itemCount} />
-      <OrderConfirmation/>
+      <Movies/>
     </>
   );
 }
