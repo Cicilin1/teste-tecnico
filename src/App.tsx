@@ -1,11 +1,13 @@
-import Header from "./components/Header"
+import Header from "./components/Header";
 
 function App() {
+  const itemCount = 0;
+
   return (
     <>
-    <Header/>
+      <Header itemCount={itemCount} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
