@@ -1,6 +1,6 @@
 
 
-export default async function getApiGitHub() {
+export default async function getMovies() {
     try {
         const req = await fetch("https://wefit-movies.vercel.app/api/movies", { method: "GET" });
         if (req.status === 200) {
@@ -14,3 +14,5 @@ export default async function getApiGitHub() {
         return null;
     }
 }
+
+
