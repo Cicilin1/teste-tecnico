@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Movies from './components/Movies'
+import { Rout } from './routes';
 
 function App() {
   const itemCount = 0;
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header itemCount={itemCount} />
-      <Movies/>
+      <Rout/>
     </>
   );
 }

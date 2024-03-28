@@ -6,9 +6,12 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ itemCount }) => {
+
+
+
     return (
         <Container>
-            <h1>WeMovies</h1>
+            <h1 >WeMovies</h1>
 
             <div className="CartContainer">
                 <div className="cartText">

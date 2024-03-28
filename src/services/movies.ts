@@ -1,18 +1,7 @@
+import  axios from "axios";
 
+const api = axios.create({
+    baseURL: "https://wefit-movies.vercel.app/api/movies"
+});
 
-export default async function getMovies() {
-    try {
-        const req = await fetch("https://wefit-movies.vercel.app/api/movies", { method: "GET" });
-        if (req.status === 200) {
-            const data = await req.json();
-            return data;
-        } else {
-            throw new Error("Failed Fetch!");
-        }
-    } catch (err) {
-        console.error();
-        return null;
-    }
-}
-
-
+export default api;

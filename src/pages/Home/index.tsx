@@ -1,11 +1,11 @@
-import React from 'react';
+import MovieList from "../../components/Movies";
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
+
+
+
   return (
-    <div>
-      <h2>Página Inicial</h2>
-    </div>
+    <MovieList/> 
   );
 };
 
-export default Home;

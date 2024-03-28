@@ -1,4 +1,6 @@
-const Cart: React.FC = () => {
+
+
+export const Cart: React.FC = () => {
   return (
     <div>
       <h2>Página do Carrinho</h2>
@@ -6,4 +8,3 @@ const Cart: React.FC = () => {
   );
 };
 
-export default Cart;

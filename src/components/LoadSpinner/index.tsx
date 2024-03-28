@@ -1,7 +1,7 @@
 import { Container, Load } from './styles';
 import LoadSpinnerImg from '../../assets/load-spinner.png';
 
-const LoadSpinner: React.FC = () => {
+export const LoadSpinner: React.FC = () => {
     return (
         <Container>
             <Load>
@@ -11,4 +11,3 @@ const LoadSpinner: React.FC = () => {
     );
 };
 
-export default LoadSpinner;
