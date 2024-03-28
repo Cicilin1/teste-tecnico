@@ -1,9 +1,9 @@
-
+import { CartItem } from '../../components/CartItem'
 
 export const Cart: React.FC = () => {
   return (
     <div>
-      <h2>Página do Carrinho</h2>
+    <CartItem/>
     </div>
   );
 };

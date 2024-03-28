@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 1300px; 
+    width: 1150px; 
+    background: red;
     height: auto; 
     margin: 0 auto;
+    margin-bottom: 8rem;
 
-@media screen and ( max-width: 1030px){
-    width: auto;
-    margin: 0 20px;
+@media screen and ( max-width: 1150px){
+    width: 100%;
+    margin: 0 15px;
 }
 `
 
@@ -19,7 +21,7 @@ export const MovieList = styled.ul`
 `
 
 export const MovieItem = styled.li`
-    width: 338.67px; 
+    width: 328.67px; 
     height: 324px; 
     padding: 16px; 
     background: #FFFFFF; 
@@ -59,5 +61,10 @@ export const MovieItem = styled.li`
 
     .CartIcon{
         background: transparent;
+    }
+
+    #count-item{
+        background: transparent;
+        margin-right: 8px;
     }
 `

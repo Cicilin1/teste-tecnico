@@ -1,11 +1,9 @@
-const Confirmation: React.FC = () => {
+import OrderConfirmation from '../../components/OrderConfirmation'
+
+export const Confirmation: React.FC = () => {
     return (
-      <div>
-        <h2>Página de Confirmação</h2>
-        {/* Conteúdo da página de confirmação */}
-      </div>
+      <OrderConfirmation/>
     );
   };
-  
-  export default Confirmation;
+
 
