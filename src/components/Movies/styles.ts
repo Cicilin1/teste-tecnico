@@ -7,17 +7,29 @@ export const Container = styled.div`
     margin: 0 auto;
     margin-bottom: 8rem;
 
-@media screen and ( max-width: 1150px){
-    width: 100%;
-    margin: 0 15px;
-}
+    @media screen and (max-width: 1150px){
+        width: 100%;
+    }
+
+    @media screen and (max-width: 400px){
+        width: 91%;
+        margin: 0 auto; 
+    }
+
 `
 
 export const MovieList = styled.ul` 
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+
+
+    @media screen and ( max-width: 770px){
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const MovieItem = styled.li`

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, MovieItem, MovieList } from "./styles";
 import Button from "../Button";
-import CartIcon from "../../assets/Cart-icon.png";
+import CartIcon from "../../assets/icons/Cart-icon.png";
 import { LoadSpinner } from "../../components/LoadSpinner";
+import { ErrorPage } from "../ErrorPage"
 
 type Movie = {
   id: number;
@@ -15,6 +16,9 @@ type Movie = {
 const MovieListComponent: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<boolean>(false);
+
+  // const [cartItems, setCartItems] = useState<{ movie: Movie; quantity: number }[]>([]);   implementação da lógica do carrinho
 
   useEffect(() => {
     const getMovies = async () => {
@@ -32,13 +36,19 @@ const MovieListComponent: React.FC = () => {
             "Expected an array of movies, but got:",
             response.data.products
           );
+          setError(true); 
         }
       } catch (error) {
         console.error("Error fetching movies:", error);
+        setError(true);
       }
     };
     getMovies();
   }, []);
+
+  if (error) {
+    return <ErrorPage />;
+  }
 
   return (
     <Container>

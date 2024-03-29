@@ -53,8 +53,8 @@ export const Container = styled.div`
     height: 22px
   }
 
-  @media screen and (max-width: 1100px){
-    width: 100%;
+  @media screen and (max-width: 1114px){
+    width: 720.32px;
 
   .CartContainer{
     justify-content: flex-end;
@@ -63,8 +63,16 @@ export const Container = styled.div`
   .cartText div{
     display: none;
   }
+
+
+  @media screen and (max-width: 770px){
+    width: 360.66px;
+  
   }
 
-  
+  /* @media screen and (max-width: 400px){
+    width: 100%;
+  } */
+}
 `
 

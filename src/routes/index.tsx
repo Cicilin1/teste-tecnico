@@ -12,9 +12,9 @@ export const Rout = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/error" element={<Error/>} />
                 <Route path="/cart" element={<Cart/>} />
                 <Route path="/confirmation" element={<Confirmation/>} />
+                <Route path="*" element={<Error/>} />
 
             </Routes>
         </BrowserRouter>

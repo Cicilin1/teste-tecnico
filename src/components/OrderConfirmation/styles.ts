@@ -38,9 +38,8 @@ export const Container = styled.div`
 
   
 
-  @media screen and (max-width:1100px) {
-    width: calc(100% - 40px);
-    margin: 0 16px;
+  @media screen and (max-width: 1114px){
+    width: 720.32px;
     height: 516px;
 
     img {
@@ -52,5 +51,10 @@ export const Container = styled.div`
       width: 200px;
       height: 35px;
     }
+  }
+
+
+  @media screen and (max-width: 770px){
+    width: 328px;
   }
 `;

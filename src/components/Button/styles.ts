@@ -12,7 +12,6 @@ export const Container = styled.button`
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin: 0 auto;
 
     &:hover {
         cursor: pointer;
