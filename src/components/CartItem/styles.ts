@@ -4,6 +4,7 @@ export const Container = styled.div`
     width: 1048px; 
     height: auto; 
     padding: 24px; 
+    margin: 0 auto;
     background: #FFFFFF; 
     border-radius: 4px; 
     display: flex;
@@ -11,7 +12,8 @@ export const Container = styled.div`
     justify-content: flex-start; 
     align-items: flex-start; 
     gap: 24px; 
-    margin: 0 auto;
+    margin-bottom: 10rem;
+
     
     .title{
         width: 1000px; 
@@ -99,11 +101,9 @@ export const Container = styled.div`
     }
 
     @media screen and (max-width: 400px){
-        width: 300px;
-        margin: 0;
-
-        
-    }
+        width: 90%;
+        margin-left: 0.7rem;
+  }
 `
 
 export const CartMovieList = styled.ul`
@@ -139,7 +139,6 @@ export const CartMovieItem = styled.li`
 
         .product-details p{
            padding: 8px;
-           background: red;
            color: #2F2E41; 
            font-size: 16px; 
            font-weight: 700; 
@@ -187,7 +186,6 @@ export const CartMovieItem = styled.li`
     .subtotal-container{
         width: 348px; 
         height: 20px; 
-        background: red;
         background: inherit;
 
         // Utilizado apenas em telas menores para descrever o subtotal.
@@ -203,11 +201,11 @@ export const CartMovieItem = styled.li`
         }
 
         .subtotal{
-        color: #2F2E41; 
-        font-size: 16px; 
-        font-weight: 700; 
-        word-wrap: break-word;
-        background: inherit;
+            color: #2F2E41; 
+            font-size: 16px; 
+            font-weight: 700; 
+            word-wrap: break-word;
+            background: inherit;
     }
     }
 
@@ -218,15 +216,13 @@ export const CartMovieItem = styled.li`
         background: inherit;
     }
     
+    
     @media screen and (max-width: 1114px){
-
-    }
-
-    @media screen and (max-width: 770px){
     position:relative;
 
     .product-container{
         position: relative;
+        width: 720.32px;
 
         .product{
             align-items: start;
@@ -241,6 +237,7 @@ export const CartMovieItem = styled.li`
                 gap: 15px;
                 display: flex;
                 align-items: center;
+                background: inherit;
                 background: inherit;
             }
 
@@ -262,7 +259,7 @@ export const CartMovieItem = styled.li`
         width: 66px; 
         height: 38px;
         position: absolute;
-        right:40px;
+        right:0px;
         top: 54px;
 
         .subtotal-label{
@@ -272,9 +269,28 @@ export const CartMovieItem = styled.li`
     }
     
     .trash-button {
-    position: absolute;
-    right: 15px; 
-    top: 10px; 
+        position: absolute;
+        right: 15px; 
+        top: 10px; 
     } 
     }
+
+    @media screen and (max-width: 770px){
+
+        .product-container{
+            position: relative;
+            width: 100%;
+        }
+        
+        .quantity{
+            left:77px;
+            top: 60px;
+        }
+
+        .subtotal-container{
+            right:40px;
+            top: 54px;
+        }
+    }
+
 ` 

@@ -12,6 +12,7 @@ export const Container = styled.div`
   justify-content: flex-start; 
   align-items: center; 
   gap: 24px; 
+  margin-bottom: 5rem;
 
   .confirm-message {
     width: auto; 
@@ -56,5 +57,10 @@ export const Container = styled.div`
 
   @media screen and (max-width: 770px){
     width: 328px;
+  }
+
+  @media screen and (max-width: 400px){
+    width: 90%;
+    margin-left: 0.7rem;
   }
 `;

@@ -14,7 +14,7 @@ export const ErrorPage: React.FC = () => {
   return (
     <Container>
       <div className="error-message">Parece que não há nada por aqui :(</div>
-      <img src={FrameError} alt="" />
+      <img src={FrameError} alt="Recarregar: Pessoa mostrando um ícone de recarregar" />
       <Button onClick={goToHome}>Recarregar Página</Button>
     </Container>
   );

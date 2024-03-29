@@ -8,7 +8,6 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ itemCount }) => {
 
 
-
     return (
         <Container>
             <h1>WeMovies</h1>
@@ -20,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ itemCount }) => {
                 </div>
 
                 <div className="cartIcon">
-                    <img src={Vector} alt="" />
+                    <img src={Vector} alt="Ícone de carrinho de compras" />
                 </div>
             </div>
         </Container>

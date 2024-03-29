@@ -5,7 +5,7 @@ export const LoadSpinner: React.FC = () => {
     return (
         <Container>
             <Load>
-                <img src={LoadSpinnerImg} alt="Loading" />
+                <img src={LoadSpinnerImg} alt="ícone de carregamento" />
             </Load>
         </Container>
     );

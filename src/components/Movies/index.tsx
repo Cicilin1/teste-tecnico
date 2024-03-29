@@ -62,7 +62,7 @@ const MovieListComponent: React.FC = () => {
               <h3>{movie.title}</h3>
               <p> R$ {movie.price}</p>
               <Button style={{ width: '306.67px', gap: '8px'}}>
-                <img src={CartIcon} alt="" className="CartIcon" />
+                <img src={CartIcon} alt="" className="Ícone de carrinho" />
                 <div id='count-item'>0</div>
                  ADICIONAR AO CARRINHO
               </Button>

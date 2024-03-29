@@ -3,7 +3,7 @@ import Button from '../Button';
 import Sum from '../../assets/sum.png';
 import Less from '../../assets/less.png';
 import trash from '../../assets/trash.png';
-import Spider from '../../assets/spider.png'
+
 
 export const CartItem = () => {
     return (
@@ -18,7 +18,7 @@ export const CartItem = () => {
                 <CartMovieItem>
                     <div className="product-container">
                         <div className="product">
-                            <img src={Spider} alt="" />
+                            <img src="" alt="" />
                             <div className="product-details">
                                 <p>Homem aranha</p>
                                 <p>R$ 29,99</p>
@@ -26,16 +26,16 @@ export const CartItem = () => {
                         </div>
 
                         <div className="quantity">
-                            <button><img src={Less} alt="" /></button>
+                            <button><img src={Less} alt="Diminuir quantidade" /></button>
                             <div className="count">1</div>
-                            <button><img src={Sum} alt="" /></button>
+                            <button><img src={Sum} alt="Aumentar quantidade" /></button>
                         </div>
 
                         <div className="subtotal-container">
                             <div className="subtotal-label">SUBTOTAL</div>
                             <div className="subtotal">R$ 29,99</div>
                         </div>
-                        <button className="trash-button"><img src={trash} alt="" /></button>
+                        <button className="trash-button"><img src={trash} alt="Excluir item" /></button>
                     </div>
                 </CartMovieItem>
             </CartMovieList>

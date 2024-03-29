@@ -3,10 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
   width: 1080px;
   height: 88px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 24px 16px;
   color: #FFFFFF;
   align-items: center;
   justify-content: space-between;
@@ -70,9 +67,9 @@ export const Container = styled.div`
   
   }
 
-  /* @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px){
     width: 100%;
-  } */
+  }
 }
 `
 
