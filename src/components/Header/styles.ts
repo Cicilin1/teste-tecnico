@@ -17,6 +17,10 @@ export const Container = styled.div`
     justify-content: center; 
     align-items: center; 
     display: flex;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   .cartText{

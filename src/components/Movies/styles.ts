@@ -79,4 +79,8 @@ export const MovieItem = styled.li`
         background: transparent;
         margin-right: 8px;
     }
+
+    img{
+        background: transparent;
+    }
 `

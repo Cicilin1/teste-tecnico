@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ itemCount }) => {
                 </div>
 
                 <div className="cartIcon">
-                    <img src={Vector} alt="Ícone de carrinho de compras" />
+                    <img src={Vector} alt="" />
                 </div>
             </div>
         </Container>
