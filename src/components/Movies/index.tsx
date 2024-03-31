@@ -5,6 +5,7 @@ import Button from "../Button";
 import CartIcon from "../../assets/Cart-icon.png";
 import { LoadSpinner } from "../LoadSpinner";
 import { ErrorPage } from "../ErrorPage";
+import { CartItem } from "../CartItem";
 
 type Movie = {
   id: number;
@@ -79,6 +80,7 @@ const MovieListComponent: React.FC = () => {
               ))
           )}
         </MovieList>
+        <CartItem cartItems={cart} />
       </Container>
   );
 };

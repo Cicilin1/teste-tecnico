@@ -4,6 +4,7 @@ import Button from '../Button';
 import Sum from '../../assets/sum.png';
 import Less from '../../assets/less.png';
 import Trash from '../../assets/trash.png';
+import OrderConfirmation from '../OrderConfirmation';
 
 type Movie = {
     id: number;
@@ -19,6 +20,7 @@ type CartItemProps = {
 
 export const CartItem: React.FC<CartItemProps> = ({ cartItems = [] }) => {
     const [cart, setCart] = useState<Movie[]>(cartItems);
+    const [compraFinalizada, setCompraFinalizada] = useState(false);
 
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
@@ -42,6 +44,14 @@ export const CartItem: React.FC<CartItemProps> = ({ cartItems = [] }) => {
         setCart((prevCart) => prevCart.filter((movie) => movie.id !== movieId));
     };
 
+    const finalizarPedido = () => {
+        setCompraFinalizada(true);
+    };
+
+    if (compraFinalizada) {
+        return <OrderConfirmation />;
+    }
+
     return (
         <Container>
             <div className='title'>
@@ -63,12 +73,12 @@ export const CartItem: React.FC<CartItemProps> = ({ cartItems = [] }) => {
                             </div>
 
                             <div className="quantity">
-                                <button onClick={() => onDecrease(item.id)}><img src={Less}
-                                    alt="Diminuir quantidade" />
+                                <button onClick={() => onDecrease(item.id)}>
+                                    <img src={Less} alt="Diminuir quantidade" />
                                 </button>
                                 <div className="count">{item.quantity}</div>
-                                <button onClick={() => onIncrease(item.id)}><img src={Sum}
-                                    alt="Aumentar quantidade" />
+                                <button onClick={() => onIncrease(item.id)}>
+                                    <img src={Sum} alt="Aumentar quantidade" />
                                 </button>
                             </div>
 
@@ -76,8 +86,8 @@ export const CartItem: React.FC<CartItemProps> = ({ cartItems = [] }) => {
                                 <div className="subtotal-label">SUBTOTAL</div>
                                 <div className="subtotal">R$ {(item.price * item.quantity).toFixed(2)}</div>
                             </div>
-                            <button className="trash-button" onClick={() => onRemove(item.id)}><img src={Trash}
-                                alt="Excluir item" />
+                            <button className="trash-button" onClick={() => onRemove(item.id)}>
+                                <img src={Trash} alt="Excluir item" />
                             </button>
                         </div>
                     </CartMovieItem>
@@ -85,8 +95,9 @@ export const CartItem: React.FC<CartItemProps> = ({ cartItems = [] }) => {
             </CartMovieList>
 
             <div className="checkout">
-                <Button style={{ fontWeight: "700", width: "173px", height: "34px", fontSize: "12px" }}>FINALIZAR
-                    PEDIDO</Button>
+                <Button style={{ fontWeight: "700", width: "173px", height: "34px", fontSize: "12px" }} onClick={finalizarPedido}>
+                    FINALIZAR PEDIDO
+                </Button>
 
                 <div className="total-container">
                     <p>TOTAL</p>
