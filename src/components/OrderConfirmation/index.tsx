@@ -7,9 +7,9 @@ const ErrorPage: React.FC = () => {
   const navigate = useNavigate()
 
   const goToHome = () => {
-    navigate("/")
+    window.location.reload();
+    navigate("/"); 
   };
-
   return (
     <Container>
       <div className="confirm-message">Compra realizada com sucesso!</div>

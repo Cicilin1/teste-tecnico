@@ -136,6 +136,11 @@ export const CartMovieItem = styled.li`
         align-items: center;
         background: inherit;
 
+        img {
+            width: 64px; 
+            height: 82px; 
+        }
+
 
         .product-details p{
            padding: 8px;
@@ -256,7 +261,7 @@ export const CartMovieItem = styled.li`
     }
 
     .subtotal-container{
-        width: 66px; 
+        width: 70px; 
         height: 38px;
         position: absolute;
         right:0px;
