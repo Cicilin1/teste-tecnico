@@ -38,7 +38,6 @@ export const Container = styled.div`
   }
 
   
-
   @media screen and (max-width: 1114px){
     width: 720.32px;
     height: 516px;

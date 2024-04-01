@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, CartMovieList, CartMovieItem } from './styles';
 import Button from '../Button';
@@ -51,7 +51,7 @@ export const CartItem: React.FC = () => {
                 <Container>
                     <div className='title'>
                         <p>Products</p>
-                        <p>Amount</p>
+                        <p>QTD</p>
                         <p>Subtotal</p>
                     </div>
 
@@ -101,7 +101,6 @@ export const CartItem: React.FC = () => {
                     </div>
                 </Container>
             )}
-            
             {compraFinalizada && <OrderConfirmation />}
         </>
     );

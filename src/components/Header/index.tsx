@@ -1,13 +1,16 @@
-import React from 'react';
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
 import Vector from '../../assets/Vector.png';
+import { useCart } from '../../hooks/cart';
 
 interface HeaderProps {
-    itemCount: number;
+
 }
 
-export const Header: React.FC<HeaderProps> = ({ itemCount }) => {
+export const Header: React.FC<HeaderProps> = () => {
+    const { cart } = useCart();
+    const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+
     return (
         <Container>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>

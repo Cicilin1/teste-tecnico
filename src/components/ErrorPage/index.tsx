@@ -10,7 +10,6 @@ export const ErrorPage: React.FC = () => {
     navigate("/")
   };
 
-
   return (
     <Container>
       <div className="error-message">Parece que não há nada por aqui :(</div>

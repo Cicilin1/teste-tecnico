@@ -31,7 +31,6 @@ export const Container = styled.div`
             word-wrap: break-word;
             background: inherit;
         }
-
     }
 
     .checkout {
@@ -43,7 +42,6 @@ export const Container = styled.div`
         background: inherit;
         padding-top: 24px;
         border-top: 1px solid #999999;
-
 
         .total-container{
             width: 197.26px; 
@@ -103,14 +101,14 @@ export const Container = styled.div`
     @media screen and (max-width: 400px){
         width: 90%;
         margin-left: 0.7rem;
-  }
+    }
 `
 
 export const CartMovieList = styled.ul`
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 `
 
 export const CartMovieItem = styled.li`
@@ -141,7 +139,6 @@ export const CartMovieItem = styled.li`
             height: 82px; 
         }
 
-
         .product-details p{
            padding: 8px;
            color: #2F2E41; 
@@ -149,7 +146,7 @@ export const CartMovieItem = styled.li`
            font-weight: 700; 
            word-wrap: break-word;
            background: #FFFFFF;
-
+           width: 500px;
         }
     }
 
@@ -160,7 +157,6 @@ export const CartMovieItem = styled.li`
         display: flex;
         align-items: center;
         background: inherit;
-
 
         img{
             width: 18px; 
@@ -211,7 +207,8 @@ export const CartMovieItem = styled.li`
             font-weight: 700; 
             word-wrap: break-word;
             background: inherit;
-    }
+            width: 80px;
+        }
     }
 
     //Ajuste para tornar as imagens/Buttons interativas
@@ -221,9 +218,8 @@ export const CartMovieItem = styled.li`
         background: inherit;
     }
     
-    
     @media screen and (max-width: 1114px){
-    position:relative;
+        position:relative;
 
     .product-container{
         position: relative;
@@ -243,12 +239,15 @@ export const CartMovieItem = styled.li`
                 display: flex;
                 align-items: center;
                 background: inherit;
-                background: inherit;
             }
 
             .product-details p:first-child{
                 width: 102px;
                 padding:2px;
+            }
+
+            .product-details p:last-child{
+                width: 80px;
             }
     }
 
@@ -264,7 +263,7 @@ export const CartMovieItem = styled.li`
         width: 70px; 
         height: 38px;
         position: absolute;
-        right:0px;
+        right:25px;
         top: 54px;
 
         .subtotal-label{
@@ -275,13 +274,12 @@ export const CartMovieItem = styled.li`
     
     .trash-button {
         position: absolute;
-        right: 15px; 
+        right: 10px; 
         top: 10px; 
     } 
     }
 
     @media screen and (max-width: 770px){
-
         .product-container{
             position: relative;
             width: 100%;

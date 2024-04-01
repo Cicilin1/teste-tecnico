@@ -37,8 +37,6 @@ export const Container = styled.div`
     object-fit: cover;
   }
 
-  
-
   @media screen and (max-width: 1114px){
     width: 720.32px;
     height: 516px;
@@ -53,7 +51,6 @@ export const Container = styled.div`
       height: 35px;
     }
   }
-
 
   @media screen and (max-width: 770px){
     width: 328px;

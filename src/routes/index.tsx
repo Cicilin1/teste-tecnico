@@ -5,11 +5,10 @@ import { Cart } from '../pages/Cart'
 import { Header } from "../components/Header";
 
 export const Rout = () => {
-    const itemCount = 0;
 
     return (
         <BrowserRouter>
-            <Header itemCount={itemCount} />
+            <Header  />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cart" element={<Cart />} />

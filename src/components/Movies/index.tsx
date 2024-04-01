@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, MovieList, MovieItem } from "./styles";
 import Button from "../Button";
@@ -50,32 +50,38 @@ const MovieListComponent: React.FC = () => {
         {loading ? (
           <LoadSpinner />
         ) : (
-          movies.map((movie) => (
-            <MovieItem key={movie.id}>
-              <img src={movie.image} alt={movie.title} className="posterImage" />
-              <h3>{movie.title}</h3>
-              <p>R$ {movie.price}</p>
-              <Button
-                style={{ width: "306.67px", gap: "8px" }}
-                onClick={() => {
-                  const existingItemIndex = cart.findIndex((item) => item.id === movie.id);
-                  if (existingItemIndex !== -1) {
-                    const updatedCart = [...cart];
-                    updatedCart[existingItemIndex].quantity += 1;
-                    addToCart(updatedCart);
-                  } else {
-                    addToCart([...cart, { ...movie, quantity: 1 }]);
-                  }
-                }}
-              >
-                <img src={CartIcon} alt="" className="Ícone de carrinho" />
-                <div id="count-item">
-                  {cart.find((item) => item.id === movie.id)?.quantity || 0}
-                </div>
-                ADICIONAR AO CARRINHO
-              </Button>
-            </MovieItem>
-          ))
+          movies.map((movie) => {
+            const quantityInCart = cart.find((item) => item.id === movie.id)?.quantity || 0;
+            const buttonClassName = quantityInCart > 0 ? 'cartButtonWithItems' : '';
+
+            return (
+              <MovieItem key={movie.id}>
+                <img src={movie.image} alt={movie.title} className="posterImage" />
+                <h3>{movie.title}</h3>
+                <p>R$ {movie.price}</p>
+                <Button
+                  className={buttonClassName}
+                  style={{ width: "306.67px", gap: "8px" }}
+                  onClick={() => {
+                    const existingItemIndex = cart.findIndex((item) => item.id === movie.id);
+                    if (existingItemIndex !== -1) {
+                      const updatedCart = [...cart];
+                      updatedCart[existingItemIndex].quantity += 1;
+                      addToCart(updatedCart);
+                    } else {
+                      addToCart([...cart, { ...movie, quantity: 1 }]);
+                    }
+                  }}
+                >
+                  <img src={CartIcon} alt="" className="Ícone de carrinho" />
+                  <div id="count-item">
+                    {quantityInCart}
+                  </div>
+                  ADICIONAR AO CARRINHO
+                </Button>
+              </MovieItem>
+            );
+          })
         )}
       </MovieList>
     </Container>

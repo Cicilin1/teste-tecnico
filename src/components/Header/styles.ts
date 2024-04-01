@@ -41,12 +41,13 @@ export const Container = styled.div`
 
 
   p{
-    width: 41.98px; 
+    width: 60px; 
     height: 19px; 
+    text-align: end;
     color: #999999; 
     font-size: 12px; 
     font-weight: 200; 
-    word-wrap: break-word
+    word-wrap: break-word;
   }}
 
   .cartIcon img{
