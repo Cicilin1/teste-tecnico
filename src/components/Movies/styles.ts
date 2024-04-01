@@ -1,22 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 1150px; 
+    width: 100%;
+    max-width: 1150px;
     background: red;
     height: auto; 
     margin: 0 auto;
     margin-bottom: 8rem;
 
-    @media screen and (max-width: 1150px){
-        width: 100%;
-    }
-
     @media screen and (max-width: 400px){
-        width: 91%;
-        margin: 0 auto; 
+        width: 90%;
     }
-
-`
+`;
 
 export const MovieList = styled.ul` 
     width: 100%;
@@ -25,12 +20,11 @@ export const MovieList = styled.ul`
     justify-content: center;
     gap: 16px;
 
-
-    @media screen and ( max-width: 770px){
+    @media screen and (max-width: 770px){
         flex-direction: column;
         align-items: center;
     }
-`
+`;
 
 export const MovieItem = styled.li`
     width: 328.67px; 
@@ -83,4 +77,4 @@ export const MovieItem = styled.li`
     img{
         background: transparent;
     }
-`
+`;
