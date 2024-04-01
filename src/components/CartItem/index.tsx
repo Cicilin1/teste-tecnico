@@ -5,7 +5,7 @@ import Button from '../Button';
 import Sum from '../../assets/sum.png';
 import Less from '../../assets/less.png';
 import Trash from '../../assets/trash.png';
-import OrderConfirmation from '../OrderConfirmation';
+import { OrderConfirmation } from '../OrderConfirmation';
 import { useCart } from '../../hooks/cart';
 
 export const CartItem: React.FC = () => {

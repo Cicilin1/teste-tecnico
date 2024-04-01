@@ -1,15 +1,18 @@
 import { Container } from './styles';
 import { useNavigate } from 'react-router-dom'; 
 import FrameConfirm from '../../assets/Frame-confirm.png';
-import Button from '../Button'
+import Button from '../Button';
+import { useCart } from '../../hooks/cart';
 
-const ErrorPage: React.FC = () => {
-  const navigate = useNavigate()
+export const OrderConfirmation: React.FC = () => {
+  const navigate = useNavigate();
+  const { clearCart } = useCart();
 
   const goToHome = () => {
-    window.location.reload();
+    clearCart();
     navigate("/");
   };
+  
   return (
     <Container>
       <div className="confirm-message">Compra realizada com sucesso!</div>
@@ -18,5 +21,3 @@ const ErrorPage: React.FC = () => {
     </Container>
   );
 };
-
-export default ErrorPage;

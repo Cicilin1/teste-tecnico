@@ -1,9 +1,7 @@
-import { ErrorPage } from '../../components/ErrorPage'
+import { ErrorPage } from '../../components/ErrorPage';
 
 export const Error: React.FC = () => {
     return (
-      <ErrorPage/>
+        <ErrorPage/>
     );
-  };
-
-
+};
