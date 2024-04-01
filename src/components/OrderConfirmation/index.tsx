@@ -8,7 +8,7 @@ const ErrorPage: React.FC = () => {
 
   const goToHome = () => {
     window.location.reload();
-    navigate("/"); 
+    navigate("https://teste-tecnico-inky.vercel.app/"); 
   };
   return (
     <Container>
